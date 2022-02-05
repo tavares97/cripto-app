@@ -1,7 +1,17 @@
+import { Routes, Route } from 'react-router-dom';
+import { Layout, Typography, Space } from 'antd';
+
+import { Navbar } from './components';
+import './App.css';
+
 function App() {
 	return (
-		<div>
-			<h1>APP WORKS</h1>
+		<div className='app'>
+			<div className='navbar'>
+				<Navbar />
+			</div>
+			<div className='main'></div>
+			<div className='footer'></div>
 		</div>
 	);
 }
