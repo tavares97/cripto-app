@@ -1,17 +1,25 @@
 import { Routes, Route } from 'react-router-dom';
-import { Layout, Typography, Space } from 'antd';
-
-import { Navbar } from './components';
-import './App.css';
+import {
+	Navbar,
+	Homepage,
+	Currencies,
+	CurrencyDetails,
+	News,
+} from './components';
+import Exchanges from './components/Exchanges';
 
 function App() {
 	return (
-		<div className='app'>
-			<div className='navbar'>
-				<Navbar />
-			</div>
-			<div className='main'></div>
-			<div className='footer'></div>
+		<div className='h-screen grid grid-cols-custom-sidenav-layout'>
+			<Navbar />
+
+			<Routes>
+				<Route index element={<Homepage />} />
+				<Route path='/exchanges' element={<Exchanges />} />
+				<Route path='/currencies' element={<Currencies />} />
+				<Route path='/currencies/:coinId' element={<CurrencyDetails />} />
+				<Route path='/news' element={<News />} />
+			</Routes>
 		</div>
 	);
 }
