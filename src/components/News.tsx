@@ -1,6 +1,8 @@
-import React from 'react';
+type NewsProps = {
+	simplified?: boolean;
+};
 
-const News = () => {
+const News = ({ simplified }: NewsProps) => {
 	return (
 		<div>
 			<h1>NEWS</h1>
