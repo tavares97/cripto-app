@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.card {
+		@apply border shadow-md rounded-sm hover:shadow-lg hover:scale-105 hover:duration-300;
+	}
+
+  .home-btn {
+    @apply border p-2 rounded-md bg-gray-900 text-white shadow-md hover:bg-gray-600
+  }
+}

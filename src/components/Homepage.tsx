@@ -53,21 +53,15 @@ const Homepage = () => {
 
 			<div className='flex justify-between items-center my-6 '>
 				<span className='text-xl'>Top 10 crypto right now</span>
-				<Link
-					to='/currencies'
-					className='border p-2 rounded-md bg-gray-900 text-white shadow-md hover:bg-gray-600 '
-				>
+				<Link to='/currencies' className='home-btn '>
 					See All
 				</Link>
 			</div>
 			<Currencies simplified />
 
-			<div className='flex justify-between mt-6 '>
+			<div className='flex justify-between items-center my-6'>
 				<span className='text-xl'>All latest crypto news</span>
-				<Link
-					to='/news'
-					className='border p-2 rounded-md bg-gray-900 text-white shadow-md hover:bg-gray-600 '
-				>
+				<Link to='/news' className='home-btn '>
 					See News
 				</Link>
 			</div>

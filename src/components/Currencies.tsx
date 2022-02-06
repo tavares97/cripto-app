@@ -38,12 +38,16 @@ const Currencies = ({ simplified }: CurrencyProps) => {
 				</div>
 			)}
 
-			<div className={`grid grid-cols-4 gap-4 ${!simplified && 'p-5'}`}>
+			<div
+				className={`grid xl:grid-cols-4 lg:grid-cols-2 gap-4 ${
+					!simplified && 'p-5'
+				}`}
+			>
 				{cryptos?.map((currency: any) => (
 					<Link
 						to={`/currencies/${currency?.uuid}`}
 						key={currency?.uuid}
-						className='border shadow-md rounded-sm hover:shadow-lg hover:scale-105 hover:duration-300'
+						className='card'
 					>
 						<div className='flex justify-between items-center border-b-2 p-3'>
 							<span className='text-xl font-semibold'>
